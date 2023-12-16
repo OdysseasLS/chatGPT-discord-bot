@@ -27,7 +27,7 @@ client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot) return
     if (message.channel.id !== BOT_CHANNEL_ID) return
 
-    console.log(message.content) // test that the bot reads the messges
+    console.log(message.content) // test that the bot reads the messges, you can remove safely
 
     message.channel.sendTyping()
 
@@ -42,7 +42,7 @@ client.on(Events.MessageCreate, async (message) => {
 
     let lastUser = users.pop()
 
-    let prompt = `The following is a conversation between ${users.join(", ")}, and ${lastUser}. Complete the answers being sassy and very mean towards ${lastUser}. \n\n` //play around with this to alter behavior - see video
+    let prompt = `The following is a conversation between ${users.join(", ")}, and ${lastUser}.\n\n` //play around with this to alter the behavior of the bot
 
     for (let i = messages.length - 1; i>=0; i--) {
         const m = messages[i]
